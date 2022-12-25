@@ -4,8 +4,13 @@ class Ground{
             isStatic:true
         }
         ground = Bodies.rectangle(x,y,w,h,ground_options)
+        this.w = w;
+        this.h = h;
         World.add(world, ground)
-        display(){
+        
+    }
+    
+    display(){
             var pos = this.ground.position
             push()
             stroke(200)
@@ -13,5 +18,4 @@ class Ground{
             rect(pos.x,pos.y,this.w,this.h)
             pop()
         }
-    }
 }
